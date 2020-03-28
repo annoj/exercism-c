@@ -1,6 +1,8 @@
 #ifndef RESISTOR_COLOR_H
 #define RESISTOR_COLOR_H
 
+#define NUM_COLORS 10
+
 #define BLACK	0
 #define BROWN	1
 #define RED		2

@@ -8,7 +8,7 @@ int color_code(int color)
 
 int* colors()
 {
-	int* colors = malloc(sizeof(int[10]));
-	for (int i = 0; i < 10; i++) colors[i] = i;
+	int* colors = malloc(sizeof(int[NUM_COLORS]));
+	for (int i = 0; i < NUM_COLORS; i++) colors[i] = i;
 	return colors;
 }
