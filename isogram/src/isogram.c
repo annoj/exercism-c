@@ -12,9 +12,9 @@ bool is_isogram(const char phrase[])
 	for (const char *p = phrase; *p; p++) {
 		if (*p == ' ' || *p == '-')
 				continue;
-		if (letters & (0x1 << (tolower(*p) - 0x61)))
+		if (letters & (0x1 << (tolower(*p) - 'a')))
 				return false;
-		letters ^= (0x1 << (tolower(*p) - 0x61));
+		letters ^= (0x1 << (tolower(*p) - 'a'));
 	}
 	return true;
 }
