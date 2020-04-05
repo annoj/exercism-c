@@ -5,10 +5,10 @@ int compute(const char *lstrd, const char *rstrd)
 		if (!lstrd || !rstrd)
 				return ERRNULL;
 
-		const char *lc = lstrd;
-		const char *rc = rstrd;
+		char *lc = (char*)lstrd;
+		char *rc = (char*)rstrd;
 		int dist = 0;
-		while (1){
+		while (1) {
 				if ((*lc && !*rc) || (!*lc && *rc))
 						return ERRLEN;
 				if (!*lc && !*rc)
