@@ -4,10 +4,13 @@
 
 char *to_rna(const char *dna)
 {
-	char *rna = malloc(0xff);
+	char *rna = malloc(MAXLEN + 1);
 	int i = 0;
 	
 	for (const char *c = dna; *c; c++) {
+		if (i > MAXLEN)
+			return ERRLEN;
+
 		switch (*c) {
 		case 'G':
 			rna[i++] = 'C';
