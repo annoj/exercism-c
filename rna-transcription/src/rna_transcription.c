@@ -5,10 +5,10 @@
 
 char *to_rna(const char *dna)
 {
-	int slen = strlen(dna);
+	size_t slen = strlen(dna);
 	char *rna = malloc(slen + 1);
 	
-	for (int i = 0; i < slen; i++) {
+	for (unsigned int i = 0; i < slen; i++) {
 		switch (dna[i]) {
 		case 'G':
 			rna[i] = 'C';
